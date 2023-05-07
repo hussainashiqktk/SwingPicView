@@ -141,6 +141,7 @@ public class ImageViewer extends javax.swing.JFrame {
         });
 
         jButtonDeletePic.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButtonDeletePic.setForeground(new java.awt.Color(255, 0, 0));
         jButtonDeletePic.setText("Delete");
         jButtonDeletePic.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonDeletePic.addActionListener(new java.awt.event.ActionListener() {
@@ -189,7 +190,7 @@ public class ImageViewer extends javax.swing.JFrame {
                         .addComponent(jButtonDeletePic))
                     .addComponent(lblDisplayedImg, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(19, 19, 19))
         );
 
