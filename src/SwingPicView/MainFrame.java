@@ -22,7 +22,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  *
  * @author namra
  */
-public class ImageViewer extends javax.swing.JFrame {
+public class MainFrame extends javax.swing.JFrame {
 
     private static String selectedImagePath = null;
     private int rotationAngle = 0;
@@ -36,7 +36,7 @@ public class ImageViewer extends javax.swing.JFrame {
     /**
      * Creates new form ImageViewer
      */
-    public ImageViewer() {
+    public MainFrame() {
         initComponents();
     }
 
@@ -555,26 +555,27 @@ public class ImageViewer extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ImageViewer.class
+            java.util.logging.Logger.getLogger(MainFrame.class
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ImageViewer.class
+            java.util.logging.Logger.getLogger(MainFrame.class
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ImageViewer.class
+            java.util.logging.Logger.getLogger(MainFrame.class
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ImageViewer.class
+            java.util.logging.Logger.getLogger(MainFrame.class
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new ImageViewer().setVisible(true);
+            new MainFrame().setVisible(true);
         });
     }
 
