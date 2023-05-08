@@ -96,6 +96,7 @@ public class ImageViewer extends javax.swing.JFrame {
         lblDisplayedImg.setText("                                     Image Here");
 
         jButtonRotate.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButtonRotate.setForeground(new java.awt.Color(0, 255, 0));
         jButtonRotate.setText("Rotate");
         jButtonRotate.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonRotate.addActionListener(new java.awt.event.ActionListener() {
