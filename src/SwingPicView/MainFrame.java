@@ -22,7 +22,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  *
  * @author namra
  */
-public class ImageViewer extends javax.swing.JFrame {
+public class MainFrame extends javax.swing.JFrame {
 
     private static String selectedImagePath = null;
     private int rotationAngle = 0;
@@ -36,7 +36,7 @@ public class ImageViewer extends javax.swing.JFrame {
     /**
      * Creates new form ImageViewer
      */
-    public ImageViewer() {
+    public MainFrame() {
         initComponents();
     }
 
@@ -51,14 +51,14 @@ public class ImageViewer extends javax.swing.JFrame {
 
         jFrame1 = new javax.swing.JFrame();
         jFrame2 = new javax.swing.JFrame();
-        jButton1 = new javax.swing.JButton();
+        btnOpenImage = new javax.swing.JButton();
         lblDisplayedImg = new javax.swing.JLabel();
-        jButtonRotate = new javax.swing.JButton();
-        jButtonZoomIn = new javax.swing.JButton();
-        jButtonZoomOut = new javax.swing.JButton();
-        jButtonNextImage = new javax.swing.JButton();
-        jButtonBackPic = new javax.swing.JButton();
-        jButtonDeletePic = new javax.swing.JButton();
+        btnRotate = new javax.swing.JButton();
+        btnZoomIn = new javax.swing.JButton();
+        btnZoomOut = new javax.swing.JButton();
+        btnNext = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
+        btnDelete = new javax.swing.JButton();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -84,70 +84,70 @@ public class ImageViewer extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton1.setText("Open Image");
-        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnOpenImage.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnOpenImage.setText("Open Image");
+        btnOpenImage.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnOpenImage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnOpenImageActionPerformed(evt);
             }
         });
 
         lblDisplayedImg.setText("                                     Image Here");
 
-        jButtonRotate.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButtonRotate.setForeground(new java.awt.Color(0, 255, 0));
-        jButtonRotate.setText("Rotate");
-        jButtonRotate.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButtonRotate.addActionListener(new java.awt.event.ActionListener() {
+        btnRotate.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnRotate.setForeground(new java.awt.Color(0, 255, 0));
+        btnRotate.setText("Rotate");
+        btnRotate.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnRotate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonRotateActionPerformed(evt);
+                btnRotateActionPerformed(evt);
             }
         });
 
-        jButtonZoomIn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButtonZoomIn.setText("Zoom In");
-        jButtonZoomIn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButtonZoomIn.addActionListener(new java.awt.event.ActionListener() {
+        btnZoomIn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnZoomIn.setText("Zoom In");
+        btnZoomIn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnZoomIn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonZoomInActionPerformed(evt);
+                btnZoomInActionPerformed(evt);
             }
         });
 
-        jButtonZoomOut.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButtonZoomOut.setText("Zoom Out");
-        jButtonZoomOut.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButtonZoomOut.addActionListener(new java.awt.event.ActionListener() {
+        btnZoomOut.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnZoomOut.setText("Zoom Out");
+        btnZoomOut.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnZoomOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonZoomOutActionPerformed(evt);
+                btnZoomOutActionPerformed(evt);
             }
         });
 
-        jButtonNextImage.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButtonNextImage.setText("Next");
-        jButtonNextImage.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButtonNextImage.addActionListener(new java.awt.event.ActionListener() {
+        btnNext.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnNext.setText("Next");
+        btnNext.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnNext.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonNextImageActionPerformed(evt);
+                btnNextActionPerformed(evt);
             }
         });
 
-        jButtonBackPic.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButtonBackPic.setText("Back");
-        jButtonBackPic.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButtonBackPic.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnBack.setText("Previous");
+        btnBack.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonBackPicActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
 
-        jButtonDeletePic.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButtonDeletePic.setForeground(new java.awt.Color(255, 0, 0));
-        jButtonDeletePic.setText("Delete");
-        jButtonDeletePic.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButtonDeletePic.addActionListener(new java.awt.event.ActionListener() {
+        btnDelete.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnDelete.setForeground(new java.awt.Color(255, 0, 0));
+        btnDelete.setText("Delete");
+        btnDelete.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonDeletePicActionPerformed(evt);
+                btnDeleteActionPerformed(evt);
             }
         });
 
@@ -160,16 +160,16 @@ public class ImageViewer extends javax.swing.JFrame {
                 .addComponent(lblDisplayedImg, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(63, 63, 63)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButtonRotate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonZoomIn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonZoomOut, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
-                    .addComponent(jButtonNextImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonBackPic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonDeletePic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnRotate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnZoomIn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnZoomOut, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
+                    .addComponent(btnNext, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnBack, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnDelete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(23, 23, 23))
             .addGroup(layout.createSequentialGroup()
                 .addGap(460, 460, 460)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnOpenImage, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -178,27 +178,27 @@ public class ImageViewer extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(58, 58, 58)
-                        .addComponent(jButtonRotate)
+                        .addComponent(btnRotate)
                         .addGap(29, 29, 29)
-                        .addComponent(jButtonZoomIn)
+                        .addComponent(btnZoomIn)
                         .addGap(29, 29, 29)
-                        .addComponent(jButtonZoomOut)
+                        .addComponent(btnZoomOut)
                         .addGap(38, 38, 38)
-                        .addComponent(jButtonNextImage)
+                        .addComponent(btnNext)
                         .addGap(30, 30, 30)
-                        .addComponent(jButtonBackPic)
+                        .addComponent(btnBack)
                         .addGap(29, 29, 29)
-                        .addComponent(jButtonDeletePic))
+                        .addComponent(btnDelete))
                     .addComponent(lblDisplayedImg, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnOpenImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(19, 19, 19))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnOpenImageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOpenImageActionPerformed
         JFileChooser fileChooser = new JFileChooser();
         FileNameExtensionFilter imageFilter = new FileNameExtensionFilter("Image Files", "jpg", "jpeg", "png", "gif");
         fileChooser.setFileFilter(imageFilter);
@@ -226,9 +226,9 @@ public class ImageViewer extends javax.swing.JFrame {
             }
         }
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnOpenImageActionPerformed
 
-    private void jButtonRotateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRotateActionPerformed
+    private void btnRotateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRotateActionPerformed
 
         BufferedImage image = loadImage();  // Replace with your image loading logic
         if (image != null) {
@@ -245,9 +245,9 @@ public class ImageViewer extends javax.swing.JFrame {
         }
 
 
-    }//GEN-LAST:event_jButtonRotateActionPerformed
+    }//GEN-LAST:event_btnRotateActionPerformed
 
-    private void jButtonZoomInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonZoomInActionPerformed
+    private void btnZoomInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnZoomInActionPerformed
 
         String path = selectedImagePath;
         if (path != null) {
@@ -257,7 +257,7 @@ public class ImageViewer extends javax.swing.JFrame {
         }
 
 
-    }//GEN-LAST:event_jButtonZoomInActionPerformed
+    }//GEN-LAST:event_btnZoomInActionPerformed
 
     private void zoomImage() {
         ImageIcon icon = (ImageIcon) lblDisplayedImg.getIcon();
@@ -271,7 +271,7 @@ public class ImageViewer extends javax.swing.JFrame {
     }
 
 
-    private void jButtonZoomOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonZoomOutActionPerformed
+    private void btnZoomOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnZoomOutActionPerformed
 
         String path = selectedImagePath;
         if (path != null) {
@@ -294,9 +294,9 @@ public class ImageViewer extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(null, "No Image Selected");
         }
-    }//GEN-LAST:event_jButtonZoomOutActionPerformed
+    }//GEN-LAST:event_btnZoomOutActionPerformed
 
-    private void jButtonNextImageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNextImageActionPerformed
+    private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
 
         // Check if there are image files in the folder
         if (imageFiles != null && imageFiles.length > 0) {
@@ -322,9 +322,9 @@ public class ImageViewer extends javax.swing.JFrame {
                 selectedImagePath = nextImageFile.getAbsolutePath();
             }
         }
-    }//GEN-LAST:event_jButtonNextImageActionPerformed
+    }//GEN-LAST:event_btnNextActionPerformed
 //
-    private void jButtonBackPicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBackPicActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // Check if there are image files in the folder
         if (imageFiles != null && imageFiles.length > 0) {
        
@@ -359,9 +359,9 @@ public class ImageViewer extends javax.swing.JFrame {
                 selectedImagePath = nextImageFile.getAbsolutePath();
             }
         }
-    }//GEN-LAST:event_jButtonBackPicActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
-    private void jButtonDeletePicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeletePicActionPerformed
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
         String path = selectedImagePath;
         int j;
         String string3 = null;
@@ -450,7 +450,7 @@ public class ImageViewer extends javax.swing.JFrame {
 //        }
 //   
 
-    }//GEN-LAST:event_jButtonDeletePicActionPerformed
+    }//GEN-LAST:event_btnDeleteActionPerformed
 
 
 
@@ -555,37 +555,38 @@ public class ImageViewer extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ImageViewer.class
+            java.util.logging.Logger.getLogger(MainFrame.class
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ImageViewer.class
+            java.util.logging.Logger.getLogger(MainFrame.class
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ImageViewer.class
+            java.util.logging.Logger.getLogger(MainFrame.class
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ImageViewer.class
+            java.util.logging.Logger.getLogger(MainFrame.class
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new ImageViewer().setVisible(true);
+            new MainFrame().setVisible(true);
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton jButton1;
-    private javax.swing.JButton jButtonBackPic;
-    private javax.swing.JButton jButtonDeletePic;
-    private javax.swing.JButton jButtonNextImage;
-    private javax.swing.JButton jButtonRotate;
-    private javax.swing.JButton jButtonZoomIn;
-    private javax.swing.JButton jButtonZoomOut;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnDelete;
+    private javax.swing.JButton btnNext;
+    public javax.swing.JButton btnOpenImage;
+    private javax.swing.JButton btnRotate;
+    private javax.swing.JButton btnZoomIn;
+    private javax.swing.JButton btnZoomOut;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JFrame jFrame2;
     private static javax.swing.JLabel lblDisplayedImg;
